@@ -1,0 +1,187 @@
+/* ==========================================================================
+   CONFIGURACIÓN Y VARIABLES - PALETA ESCALA DE GRISES & MONOCHROME
+   ========================================================================== */
+:root {
+    --bg-dark: #0d0d0d;
+    --bg-card: #181818;
+    --bg-card-hover: #222222;
+    --border-light: #333333;
+    --border-bright: #ffffff;
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --text-subtitle: #cccccc;
+    --shadow-bold: 8px 8px 0px #ffffff;
+    --shadow-soft: 0 10px 30px rgba(255, 255, 255, 0.05);
+    --font-heading: 'Impact', 'Arial Black', sans-serif;
+    --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================================================
+   RESET Y ESTILOS GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   TITULARES PRINCIPALES (SECCIONES H1) - MAXIMALISTA
+   ========================================================================== */
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    margin: 4rem 0 2rem 0;
+    border: 4px solid var(--border-bright);
+    box-shadow: var(--shadow-bold);
+    text-align: center;
+    position: relative;
+}
+
+/* El primer H1 del documento no necesita tanto margen superior */
+body > h1:first-of-type {
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   TARJETAS DE CONTENIDO (SECCIONES H2 Y CONTENIDO ASOCIADO)
+   ========================================================================== */
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    border-left: 6px solid #ffffff;
+    padding-left: 1rem;
+}
+
+/* Subtítulos (H3) */
+h3 {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo de cierre al final de la página */
+body > h3:last-of-type {
+    font-style: normal;
+    font-size: 1.2rem;
+    background: #181818;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: 4px 4px 0px #ffffff;
+}
+
+/* Párrafos generales */
+p {
+    color: var(--text-main);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    background-color: var(--bg-card);
+    padding: 1.2rem;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    border-color: var(--border-bright);
+    background-color: var(--bg-card-hover);
+}
+
+/* ==========================================================================
+   LISTAS Y ELEMENTOS DESTACADOS
+   ========================================================================== */
+ol, ul {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+    font-size: 1.05rem;
+}
+
+li::marker {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Párrafos dentro o pegados a listas (Aclaraciones) */
+ul + p, ol + p {
+    font-weight: 600;
+    border-left: 4px solid #ffffff;
+    background-color: #222222;
+}
+
+/* ==========================================================================
+   DETALLES VISUALES Y RESPONSIVE DESIGN
+   ========================================================================== */
+::selection {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Scrollbar personalizada en escala de grises */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+    border: 1px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        padding: 1rem;
+        box-shadow: 4px 4px 0px #ffffff;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
